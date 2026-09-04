@@ -245,7 +245,8 @@ document.getElementById('app').innerHTML = `
     <div class="chart-card"><h2>Por día de la semana</h2><canvas id="dowChart"></canvas></div>
     <div class="chart-card"><h2>Horario de entrenamiento</h2><canvas id="hourChart"></canvas></div>
     <div class="chart-card"><h2>Peso & grasa corporal</h2><canvas id="weightChart"></canvas></div>
-    <div class="chart-card"><h2>VO2Max & FC en reposo</h2><canvas id="vo2Chart"></canvas></div>
+    <div class="chart-card"><h2>Masa muscular & masa grasa</h2><canvas id="muscleChart"></canvas></div>
+    <div class="chart-card"><h2>VO2Max</h2><canvas id="vo2Chart"></canvas></div>
     <div class="chart-card full-width"><h2>Volumen semanal (media móvil 4 sem)</h2><canvas id="trendChart"></canvas></div>
     <div class="chart-card full-width"><h2>Heatmap de actividad</h2><canvas id="heatmapChart" height="160"></canvas></div>
   </div>
@@ -450,40 +451,46 @@ new Chart(document.getElementById('hourChart'), {
   options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } } }
 });
 
-// ── Body composition data ──
-const BODY = {
-  weight_kg: [
-    {date:"2025-11-08",value:69.87},{date:"2025-11-25",value:69.75},{date:"2025-12-01",value:69.7},{date:"2025-12-06",value:69.6},{date:"2025-12-20",value:69.55},
-    {date:"2026-01-22",value:69.48},{date:"2026-02-02",value:70.17},{date:"2026-02-12",value:68.32},{date:"2026-03-01",value:69.2},
-    {date:"2026-04-18",value:71.03},{date:"2026-04-19",value:69.05},{date:"2026-06-04",value:68.5},{date:"2026-06-10",value:68.78},
-    {date:"2026-06-16",value:66.04},{date:"2026-06-19",value:68.13},{date:"2026-07-10",value:68.17},{date:"2026-07-11",value:67.17},
-    {date:"2026-07-31",value:68.0},{date:"2026-08-08",value:68.12},{date:"2026-08-28",value:68.09},{date:"2026-08-29",value:67.67}
-  ],
-  body_fat_pct: [
-    {date:"2025-11-08",value:13.4},{date:"2025-11-25",value:13.3},{date:"2025-12-01",value:13.2},{date:"2025-12-06",value:13.1},{date:"2025-12-20",value:13.15},
-    {date:"2026-01-22",value:13.3},{date:"2026-02-02",value:13.4},{date:"2026-02-12",value:12.97},{date:"2026-03-01",value:13.2},
-    {date:"2026-04-18",value:13.63},{date:"2026-04-19",value:13.2},{date:"2026-06-04",value:13.0},{date:"2026-06-10",value:13.03},
-    {date:"2026-06-16",value:12.35},{date:"2026-06-19",value:12.87},{date:"2026-07-10",value:12.93},{date:"2026-07-11",value:12.65},
-    {date:"2026-08-08",value:12.9},{date:"2026-08-28",value:12.88},{date:"2026-08-29",value:12.75}
-  ],
-  vo2max: [
-    {date:"2025-09-22",value:55.1},{date:"2025-10-06",value:55.16},{date:"2025-10-13",value:55.35},{date:"2025-10-20",value:55.48},
-    {date:"2025-10-28",value:55.35},{date:"2025-11-03",value:55.48},{date:"2025-11-10",value:55.35},{date:"2025-11-19",value:55.22},
-    {date:"2025-11-24",value:55.1},{date:"2025-12-01",value:55.1},{date:"2025-12-08",value:55.1},{date:"2025-12-22",value:54.97},
-    {date:"2026-01-05",value:54.84},{date:"2026-01-13",value:54.84},{date:"2026-01-19",value:54.71},{date:"2026-02-09",value:54.58},
-    {date:"2026-02-24",value:54.45},{date:"2026-03-02",value:54.32},{date:"2026-03-09",value:54.19},{date:"2026-03-16",value:53.98},
-    {date:"2026-03-30",value:53.42},{date:"2026-04-08",value:53.29},{date:"2026-04-13",value:52.87},{date:"2026-04-22",value:52.73},
-    {date:"2026-04-27",value:52.6},{date:"2026-05-04",value:52.6},{date:"2026-05-13",value:52.47},{date:"2026-05-18",value:52.31},
-    {date:"2026-06-08",value:52.47}
-  ],
-  resting_hr: [
-    {date:"2026-01-01",value:62},{date:"2026-01-15",value:60},{date:"2026-02-01",value:63},{date:"2026-02-15",value:61},
-    {date:"2026-03-01",value:62},{date:"2026-03-15",value:60},{date:"2026-04-01",value:61},{date:"2026-04-15",value:59},
-    {date:"2026-05-01",value:62},{date:"2026-05-15",value:60},{date:"2026-06-01",value:63},{date:"2026-06-15",value:61},
-    {date:"2026-07-01",value:62},{date:"2026-07-15",value:58},{date:"2026-08-01",value:65},{date:"2026-08-15",value:64},
-    {date:"2026-09-01",value:62}
-  ]
-};
+// ── Body composition data (Ovutek FitPal scale) ──
+const BODY = [
+  {date:"2025-10-21",weight:69.1,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
+  {date:"2025-10-24",weight:70.7,fat_pct:13.5,muscle:58.0,fat_kg:9.5},
+  {date:"2025-10-25",weight:70.5,fat_pct:13.6,muscle:57.8,fat_kg:9.6},
+  {date:"2025-11-03",weight:69.0,fat_pct:13.1,muscle:56.9,fat_kg:9.0},
+  {date:"2025-11-08",weight:69.2,fat_pct:13.2,muscle:57.0,fat_kg:9.1},
+  {date:"2025-11-25",weight:69.5,fat_pct:13.2,muscle:57.3,fat_kg:9.2},
+  {date:"2025-12-06",weight:69.5,fat_pct:13.2,muscle:57.2,fat_kg:9.2},
+  {date:"2025-12-20",weight:68.7,fat_pct:13.0,muscle:56.7,fat_kg:8.9},
+  {date:"2026-01-22",weight:69.0,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
+  {date:"2026-02-02",weight:69.8,fat_pct:13.3,muscle:57.4,fat_kg:9.3},
+  {date:"2026-02-12",weight:68.0,fat_pct:12.9,muscle:56.2,fat_kg:8.8},
+  {date:"2026-03-01",weight:69.2,fat_pct:13.2,muscle:57.0,fat_kg:9.1},
+  {date:"2026-04-18",weight:71.0,fat_pct:13.6,muscle:58.2,fat_kg:9.7},
+  {date:"2026-04-19",weight:69.0,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
+  {date:"2026-06-04",weight:68.5,fat_pct:13.0,muscle:56.5,fat_kg:8.9},
+  {date:"2026-06-10",weight:68.8,fat_pct:13.0,muscle:56.7,fat_kg:8.9},
+  {date:"2026-06-16",weight:68.3,fat_pct:13.0,muscle:56.4,fat_kg:8.9},
+  {date:"2026-06-19",weight:68.1,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
+  {date:"2026-07-10",weight:68.2,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
+  {date:"2026-07-11",weight:67.2,fat_pct:12.7,muscle:55.7,fat_kg:8.5},
+  {date:"2026-08-08",weight:68.1,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
+  {date:"2026-08-27",weight:68.4,fat_pct:13.0,muscle:56.5,fat_kg:8.9},
+  {date:"2026-08-28",weight:67.8,fat_pct:12.8,muscle:56.1,fat_kg:8.6},
+  {date:"2026-08-29",weight:67.7,fat_pct:12.8,muscle:56.0,fat_kg:8.6}
+];
+
+const VO2 = [
+  {date:"2025-09-22",value:55.1},{date:"2025-10-06",value:55.16},{date:"2025-10-13",value:55.35},
+  {date:"2025-10-20",value:55.48},{date:"2025-10-28",value:55.35},{date:"2025-11-03",value:55.48},
+  {date:"2025-11-10",value:55.35},{date:"2025-11-19",value:55.22},{date:"2025-11-24",value:55.1},
+  {date:"2025-12-01",value:55.1},{date:"2025-12-08",value:55.1},{date:"2025-12-22",value:54.97},
+  {date:"2026-01-05",value:54.84},{date:"2026-01-13",value:54.84},{date:"2026-01-19",value:54.71},
+  {date:"2026-02-09",value:54.58},{date:"2026-02-24",value:54.45},{date:"2026-03-02",value:54.32},
+  {date:"2026-03-09",value:54.19},{date:"2026-03-16",value:53.98},{date:"2026-03-30",value:53.42},
+  {date:"2026-04-08",value:53.29},{date:"2026-04-13",value:52.87},{date:"2026-04-22",value:52.73},
+  {date:"2026-04-27",value:52.6},{date:"2026-05-04",value:52.6},{date:"2026-05-13",value:52.47},
+  {date:"2026-05-18",value:52.31},{date:"2026-06-08",value:52.47}
+];
 
 // ── Weight + Body Fat chart ──
 new Chart(document.getElementById('weightChart'), {
@@ -491,14 +498,12 @@ new Chart(document.getElementById('weightChart'), {
   data: {
     datasets: [
       {
-        label: 'Peso (kg)', data: BODY.weight_kg.map(d => ({x: new Date(d.date), y: d.value})),
-        borderColor: '#8b5cf6', backgroundColor: '#8b5cf622', fill: false,
-        tension: 0.3, pointRadius: 4, yAxisID: 'y'
+        label: 'Peso (kg)', data: BODY.map(d => ({x: new Date(d.date), y: d.weight})),
+        borderColor: '#8b5cf6', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y'
       },
       {
-        label: 'Grasa (%)', data: BODY.body_fat_pct.map(d => ({x: new Date(d.date), y: d.value})),
-        borderColor: '#f97316', backgroundColor: '#f9731622', fill: false,
-        tension: 0.3, pointRadius: 4, yAxisID: 'y1'
+        label: 'Grasa (%)', data: BODY.map(d => ({x: new Date(d.date), y: d.fat_pct})),
+        borderColor: '#f97316', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y1'
       }
     ]
   },
@@ -507,24 +512,24 @@ new Chart(document.getElementById('weightChart'), {
     plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
     scales: {
       x: { type: 'time', time: { unit: 'month' } },
-      y: { position: 'left', title: { display: true, text: 'Peso (kg)' }, min: 64, max: 73 },
-      y1: { position: 'right', title: { display: true, text: 'Grasa (%)' }, min: 11, max: 15, grid: { drawOnChartArea: false } }
+      y: { position: 'left', title: { display: true, text: 'Peso (kg)' }, min: 65, max: 73 },
+      y1: { position: 'right', title: { display: true, text: 'Grasa (%)' }, min: 12, max: 14.5, grid: { drawOnChartArea: false } }
     }
   }
 });
 
-// ── VO2Max + Resting HR chart ──
-new Chart(document.getElementById('vo2Chart'), {
+// ── Muscle vs Fat mass chart ──
+new Chart(document.getElementById('muscleChart'), {
   type: 'line',
   data: {
     datasets: [
       {
-        label: 'VO2Max', data: BODY.vo2max.map(d => ({x: new Date(d.date), y: d.value})),
-        borderColor: '#22c55e', fill: false, tension: 0.3, pointRadius: 3, yAxisID: 'y'
+        label: 'Masa muscular (kg)', data: BODY.map(d => ({x: new Date(d.date), y: d.muscle})),
+        borderColor: '#22c55e', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y'
       },
       {
-        label: 'FC reposo (bpm)', data: BODY.resting_hr.map(d => ({x: new Date(d.date), y: d.value})),
-        borderColor: '#ef4444', fill: false, tension: 0.3, pointRadius: 3, yAxisID: 'y1'
+        label: 'Masa grasa (kg)', data: BODY.map(d => ({x: new Date(d.date), y: d.fat_kg})),
+        borderColor: '#ef4444', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y1'
       }
     ]
   },
@@ -533,8 +538,28 @@ new Chart(document.getElementById('vo2Chart'), {
     plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
     scales: {
       x: { type: 'time', time: { unit: 'month' } },
-      y: { position: 'left', title: { display: true, text: 'VO2Max' }, min: 50, max: 57 },
-      y1: { position: 'right', title: { display: true, text: 'FC reposo' }, min: 50, max: 80, grid: { drawOnChartArea: false } }
+      y: { position: 'left', title: { display: true, text: 'Músculo (kg)' }, min: 54, max: 60 },
+      y1: { position: 'right', title: { display: true, text: 'Grasa (kg)' }, min: 7.5, max: 10.5, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// ── VO2Max chart ──
+new Chart(document.getElementById('vo2Chart'), {
+  type: 'line',
+  data: {
+    datasets: [{
+      label: 'VO2Max (mL/kg/min)', data: VO2.map(d => ({x: new Date(d.date), y: d.value})),
+      borderColor: '#22c55e', fill: { target: 'origin', above: '#22c55e11' },
+      tension: 0.3, pointRadius: 3
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
+    scales: {
+      x: { type: 'time', time: { unit: 'month' } },
+      y: { title: { display: true, text: 'VO2Max' }, min: 50, max: 57 }
     }
   }
 });
