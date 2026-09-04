@@ -1,0 +1,1199 @@
+[
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-02",
+    "start": "2026-01-02T20:18:00-03:00",
+    "duration": 50.3,
+    "kcal": 249,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-01-05",
+    "start": "2026-01-05T19:20:23-03:00",
+    "duration": 36.2,
+    "kcal": 443,
+    "dist_km": 6.79,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-06",
+    "start": "2026-01-06T20:20:00-03:00",
+    "duration": 28.8,
+    "kcal": 192,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-09",
+    "start": "2026-01-09T18:57:00-03:00",
+    "duration": 80.1,
+    "kcal": 356,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-12",
+    "start": "2026-01-12T19:23:00-03:00",
+    "duration": 67.0,
+    "kcal": 596,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-01-13",
+    "start": "2026-01-13T19:33:28-03:00",
+    "duration": 36.8,
+    "kcal": 485,
+    "dist_km": 7.01,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-16",
+    "start": "2026-01-16T18:42:00-03:00",
+    "duration": 68.1,
+    "kcal": 546,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-18",
+    "start": "2026-01-18T16:55:00-03:00",
+    "duration": 80.1,
+    "kcal": 602,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-01-19",
+    "start": "2026-01-19T18:36:20-03:00",
+    "duration": 36.0,
+    "kcal": 416,
+    "dist_km": 6.57,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-20",
+    "start": "2026-01-20T18:33:00-03:00",
+    "duration": 80.7,
+    "kcal": 481,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-22",
+    "start": "2026-01-22T18:49:00-03:00",
+    "duration": 75.3,
+    "kcal": 502,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-23",
+    "start": "2026-01-23T18:34:00-03:00",
+    "duration": 70.7,
+    "kcal": 507,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-01-26",
+    "start": "2026-01-26T19:14:00-03:00",
+    "duration": 40.5,
+    "kcal": 279,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-27",
+    "start": "2026-01-27T18:41:00-03:00",
+    "duration": 70.3,
+    "kcal": 577,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-29",
+    "start": "2026-01-29T18:52:00-03:00",
+    "duration": 81.7,
+    "kcal": 653,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-01-30",
+    "start": "2026-01-30T18:43:00-03:00",
+    "duration": 53.8,
+    "kcal": 392,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-03",
+    "start": "2026-02-03T18:49:00-03:00",
+    "duration": 77.6,
+    "kcal": 597,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-05",
+    "start": "2026-02-05T18:37:00-03:00",
+    "duration": 76.1,
+    "kcal": 636,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-08",
+    "start": "2026-02-08T10:06:00-03:00",
+    "duration": 84.0,
+    "kcal": 578,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-02-09",
+    "start": "2026-02-09T18:56:18-03:00",
+    "duration": 39.3,
+    "kcal": 471,
+    "dist_km": 6.8,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-10",
+    "start": "2026-02-10T19:00:00-03:00",
+    "duration": 90.1,
+    "kcal": 737,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-12",
+    "start": "2026-02-12T18:20:00-03:00",
+    "duration": 80.0,
+    "kcal": 509,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-14",
+    "start": "2026-02-14T11:12:00-03:00",
+    "duration": 50.1,
+    "kcal": 276,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-02-18",
+    "start": "2026-02-18T18:31:05-03:00",
+    "duration": 7.8,
+    "kcal": 78,
+    "dist_km": 1.11,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-18",
+    "start": "2026-02-18T18:39:00-03:00",
+    "duration": 45.5,
+    "kcal": 389,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-19",
+    "start": "2026-02-19T19:43:00-03:00",
+    "duration": 35.8,
+    "kcal": 236,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-20",
+    "start": "2026-02-20T18:34:00-03:00",
+    "duration": 55.2,
+    "kcal": 299,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-02-23",
+    "start": "2026-02-23T19:14:00-03:00",
+    "duration": 50.1,
+    "kcal": 313,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-02-24",
+    "start": "2026-02-24T17:55:00-03:00",
+    "duration": 28.2,
+    "kcal": 348,
+    "dist_km": 5.06,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Caminata",
+    "date": "2026-02-25",
+    "start": "2026-02-25T18:12:43-03:00",
+    "duration": 68.3,
+    "kcal": 305,
+    "dist_km": 4.6,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Running",
+    "date": "2026-03-02",
+    "start": "2026-03-02T18:49:57-03:00",
+    "duration": 41.1,
+    "kcal": 471,
+    "dist_km": 7.0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-03",
+    "start": "2026-03-03T18:37:00-03:00",
+    "duration": 90.0,
+    "kcal": 616,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-05",
+    "start": "2026-03-05T18:40:00-03:00",
+    "duration": 89.3,
+    "kcal": 522,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-07",
+    "start": "2026-03-07T10:47:00-03:00",
+    "duration": 66.1,
+    "kcal": 597,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-03-09",
+    "start": "2026-03-09T19:13:11-03:00",
+    "duration": 45.4,
+    "kcal": 512,
+    "dist_km": 7.62,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-10",
+    "start": "2026-03-10T18:31:00-03:00",
+    "duration": 90.1,
+    "kcal": 547,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-11",
+    "start": "2026-03-11T18:54:00-03:00",
+    "duration": 110.1,
+    "kcal": 345,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-12",
+    "start": "2026-03-12T18:23:00-03:00",
+    "duration": 80.1,
+    "kcal": 538,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-14",
+    "start": "2026-03-14T10:55:00-03:00",
+    "duration": 140.1,
+    "kcal": 981,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-03-16",
+    "start": "2026-03-16T18:44:05-03:00",
+    "duration": 47.5,
+    "kcal": 590,
+    "dist_km": 8.64,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-17",
+    "start": "2026-03-17T19:06:00-03:00",
+    "duration": 93.4,
+    "kcal": 302,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-19",
+    "start": "2026-03-19T18:17:00-03:00",
+    "duration": 100.7,
+    "kcal": 509,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-20",
+    "start": "2026-03-20T18:11:00-03:00",
+    "duration": 76.5,
+    "kcal": 514,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-03-23",
+    "start": "2026-03-23T18:04:00-03:00",
+    "duration": 52.4,
+    "kcal": 249,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-25",
+    "start": "2026-03-25T18:34:00-03:00",
+    "duration": 46.4,
+    "kcal": 125,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-26",
+    "start": "2026-03-26T19:22:00-03:00",
+    "duration": 45.7,
+    "kcal": 218,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-03-30",
+    "start": "2026-03-30T18:42:06-03:00",
+    "duration": 28.2,
+    "kcal": 302,
+    "dist_km": 4.51,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-03-31",
+    "start": "2026-03-31T18:12:00-03:00",
+    "duration": 64.6,
+    "kcal": 504,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-02",
+    "start": "2026-04-02T18:15:00-03:00",
+    "duration": 76.4,
+    "kcal": 482,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-03",
+    "start": "2026-04-03T19:21:00-03:00",
+    "duration": 71.8,
+    "kcal": 237,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-07",
+    "start": "2026-04-07T18:23:00-03:00",
+    "duration": 88.8,
+    "kcal": 438,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-08",
+    "start": "2026-04-08T18:34:34-03:00",
+    "duration": 37.5,
+    "kcal": 368,
+    "dist_km": 6.01,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-09",
+    "start": "2026-04-09T18:27:00-03:00",
+    "duration": 97.8,
+    "kcal": 692,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-10",
+    "start": "2026-04-10T18:13:00-03:00",
+    "duration": 150.2,
+    "kcal": 836,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-13",
+    "start": "2026-04-13T18:27:05-03:00",
+    "duration": 36.0,
+    "kcal": 410,
+    "dist_km": 6.42,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-14",
+    "start": "2026-04-14T18:31:00-03:00",
+    "duration": 104.3,
+    "kcal": 670,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-16",
+    "start": "2026-04-16T18:16:00-03:00",
+    "duration": 115.7,
+    "kcal": 737,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-17",
+    "start": "2026-04-17T18:02:00-03:00",
+    "duration": 80.0,
+    "kcal": 383,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-18",
+    "start": "2026-04-18T15:27:00-03:00",
+    "duration": 91.9,
+    "kcal": 823,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-04-20",
+    "start": "2026-04-20T19:01:00-03:00",
+    "duration": 67.5,
+    "kcal": 341,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-21",
+    "start": "2026-04-21T18:09:00-03:00",
+    "duration": 93.3,
+    "kcal": 708,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-22",
+    "start": "2026-04-22T18:32:54-03:00",
+    "duration": 29.0,
+    "kcal": 251,
+    "dist_km": 4.55,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-23",
+    "start": "2026-04-23T18:04:00-03:00",
+    "duration": 100.1,
+    "kcal": 737,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-26",
+    "start": "2026-04-26T19:05:00-03:00",
+    "duration": 58.2,
+    "kcal": 281,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-27",
+    "start": "2026-04-27T17:08:50-03:00",
+    "duration": 15.0,
+    "kcal": 139,
+    "dist_km": 2.0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-27",
+    "start": "2026-04-27T18:24:47-03:00",
+    "duration": 29.7,
+    "kcal": 309,
+    "dist_km": 4.25,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-27",
+    "start": "2026-04-27T18:59:25-03:00",
+    "duration": 12.0,
+    "kcal": 139,
+    "dist_km": 2.0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Running",
+    "date": "2026-04-28",
+    "start": "2026-04-28T16:55:34-03:00",
+    "duration": 12.0,
+    "kcal": 139,
+    "dist_km": 2.0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-28",
+    "start": "2026-04-28T18:00:00-03:00",
+    "duration": 82.8,
+    "kcal": 556,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-04-30",
+    "start": "2026-04-30T18:54:00-03:00",
+    "duration": 67.5,
+    "kcal": 476,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-05-01",
+    "start": "2026-05-01T19:33:00-03:00",
+    "duration": 20.8,
+    "kcal": 181,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-04",
+    "start": "2026-05-04T18:33:00-03:00",
+    "duration": 2.1,
+    "kcal": 18,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-05-04",
+    "start": "2026-05-04T18:36:49-03:00",
+    "duration": 24.3,
+    "kcal": 237,
+    "dist_km": 3.65,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-05",
+    "start": "2026-05-05T18:19:00-03:00",
+    "duration": 83.7,
+    "kcal": 673,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-07",
+    "start": "2026-05-07T19:10:00-03:00",
+    "duration": 40.0,
+    "kcal": 317,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-10",
+    "start": "2026-05-10T18:55:00-03:00",
+    "duration": 88.0,
+    "kcal": 430,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-12",
+    "start": "2026-05-12T18:21:00-03:00",
+    "duration": 90.0,
+    "kcal": 648,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-05-13",
+    "start": "2026-05-13T18:25:14-03:00",
+    "duration": 34.7,
+    "kcal": 408,
+    "dist_km": 6.05,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-14",
+    "start": "2026-05-14T18:38:00-03:00",
+    "duration": 103.0,
+    "kcal": 754,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-17",
+    "start": "2026-05-17T15:43:00-03:00",
+    "duration": 66.1,
+    "kcal": 358,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-05-18",
+    "start": "2026-05-18T18:32:04-03:00",
+    "duration": 40.1,
+    "kcal": 491,
+    "dist_km": 7.26,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-19",
+    "start": "2026-05-19T18:11:00-03:00",
+    "duration": 86.3,
+    "kcal": 560,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-23",
+    "start": "2026-05-23T16:23:00-03:00",
+    "duration": 61.7,
+    "kcal": 311,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-26",
+    "start": "2026-05-26T18:25:00-03:00",
+    "duration": 80.1,
+    "kcal": 509,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-28",
+    "start": "2026-05-28T18:02:00-03:00",
+    "duration": 75.5,
+    "kcal": 526,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-05-30",
+    "start": "2026-05-30T18:42:00-03:00",
+    "duration": 76.5,
+    "kcal": 366,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-06-01",
+    "start": "2026-06-01T19:20:00-03:00",
+    "duration": 56.6,
+    "kcal": 380,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-02",
+    "start": "2026-06-02T18:06:00-03:00",
+    "duration": 106.7,
+    "kcal": 632,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-04",
+    "start": "2026-06-04T18:06:00-03:00",
+    "duration": 100.1,
+    "kcal": 686,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-06-05",
+    "start": "2026-06-05T18:38:00-03:00",
+    "duration": 40.0,
+    "kcal": 278,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-07",
+    "start": "2026-06-07T15:26:00-03:00",
+    "duration": 86.1,
+    "kcal": 394,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Running",
+    "date": "2026-06-08",
+    "start": "2026-06-08T18:23:47-03:00",
+    "duration": 30.8,
+    "kcal": 331,
+    "dist_km": 5.13,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-09",
+    "start": "2026-06-09T18:19:00-03:00",
+    "duration": 101.7,
+    "kcal": 624,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-11",
+    "start": "2026-06-11T18:13:00-03:00",
+    "duration": 110.1,
+    "kcal": 647,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-14",
+    "start": "2026-06-14T18:39:00-03:00",
+    "duration": 56.5,
+    "kcal": 154,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-16",
+    "start": "2026-06-16T18:02:00-03:00",
+    "duration": 140.1,
+    "kcal": 785,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-06-18",
+    "start": "2026-06-18T18:09:08-03:00",
+    "duration": 96.5,
+    "kcal": 420,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-02",
+    "start": "2026-07-02T22:40:01-03:00",
+    "duration": 74.0,
+    "kcal": 515,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-09",
+    "start": "2026-07-09T18:50:59-03:00",
+    "duration": 70.0,
+    "kcal": 298,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-12",
+    "start": "2026-07-12T16:30:16-03:00",
+    "duration": 87.9,
+    "kcal": 691,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-14",
+    "start": "2026-07-14T18:15:41-03:00",
+    "duration": 90.0,
+    "kcal": 537,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-16",
+    "start": "2026-07-16T18:27:37-03:00",
+    "duration": 120.0,
+    "kcal": 714,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-18",
+    "start": "2026-07-18T12:11:44-03:00",
+    "duration": 143.5,
+    "kcal": 927,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-07-20",
+    "start": "2026-07-20T19:10:00-03:00",
+    "duration": 64.7,
+    "kcal": 368,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-21",
+    "start": "2026-07-21T18:39:22-03:00",
+    "duration": 88.8,
+    "kcal": 372,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-22",
+    "start": "2026-07-22T18:02:54-03:00",
+    "duration": 124.9,
+    "kcal": 665,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-23",
+    "start": "2026-07-23T18:13:53-03:00",
+    "duration": 140.1,
+    "kcal": 631,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-26",
+    "start": "2026-07-26T12:28:26-03:00",
+    "duration": 110.0,
+    "kcal": 610,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-28",
+    "start": "2026-07-28T18:05:30-03:00",
+    "duration": 130.2,
+    "kcal": 604,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-29",
+    "start": "2026-07-29T19:00:03-03:00",
+    "duration": 73.1,
+    "kcal": 392,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-07-30",
+    "start": "2026-07-30T18:37:18-03:00",
+    "duration": 119.1,
+    "kcal": 580,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-01",
+    "start": "2026-08-01T14:19:06-03:00",
+    "duration": 256.7,
+    "kcal": 1627,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-04",
+    "start": "2026-08-04T18:07:29-03:00",
+    "duration": 138.3,
+    "kcal": 785,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-05",
+    "start": "2026-08-05T18:38:33-03:00",
+    "duration": 74.1,
+    "kcal": 302,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-06",
+    "start": "2026-08-06T18:15:26-03:00",
+    "duration": 130.1,
+    "kcal": 419,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-08",
+    "start": "2026-08-08T14:01:54-03:00",
+    "duration": 114.2,
+    "kcal": 657,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-08-10",
+    "start": "2026-08-10T18:45:00-03:00",
+    "duration": 45.3,
+    "kcal": 301,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-11",
+    "start": "2026-08-11T18:04:13-03:00",
+    "duration": 121.6,
+    "kcal": 694,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-13",
+    "start": "2026-08-13T18:19:29-03:00",
+    "duration": 107.0,
+    "kcal": 704,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-16",
+    "start": "2026-08-16T17:23:49-03:00",
+    "duration": 107.3,
+    "kcal": 349,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-08-17",
+    "start": "2026-08-17T18:20:00-03:00",
+    "duration": 57.6,
+    "kcal": 401,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-18",
+    "start": "2026-08-18T18:09:43-03:00",
+    "duration": 135.5,
+    "kcal": 729,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-20",
+    "start": "2026-08-20T18:12:49-03:00",
+    "duration": 90.1,
+    "kcal": 588,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-22",
+    "start": "2026-08-22T12:16:24-03:00",
+    "duration": 174.2,
+    "kcal": 903,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-23",
+    "start": "2026-08-23T15:05:27-03:00",
+    "duration": 110.0,
+    "kcal": 618,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-25",
+    "start": "2026-08-25T17:52:03-03:00",
+    "duration": 122.0,
+    "kcal": 617,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-26",
+    "start": "2026-08-26T18:09:12-03:00",
+    "duration": 98.8,
+    "kcal": 477,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-27",
+    "start": "2026-08-27T18:09:00-03:00",
+    "duration": 122.1,
+    "kcal": 593,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-08-30",
+    "start": "2026-08-30T11:40:08-03:00",
+    "duration": 120.1,
+    "kcal": 785,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "HIIT",
+    "date": "2026-08-31",
+    "start": "2026-08-31T18:46:00-03:00",
+    "duration": 68.7,
+    "kcal": 425,
+    "dist_km": 0,
+    "source": "Huawei Health (manual)"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-09-01",
+    "start": "2026-09-01T18:37:30-03:00",
+    "duration": 135.4,
+    "kcal": 716,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-09-02",
+    "start": "2026-09-02T18:46:12-03:00",
+    "duration": 65.3,
+    "kcal": 461,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  },
+  {
+    "type": "Fuerza Tradicional",
+    "date": "2026-09-03",
+    "start": "2026-09-03T18:11:46-03:00",
+    "duration": 108.3,
+    "kcal": 702,
+    "dist_km": 0,
+    "source": "Salud de Huawei"
+  }
+]
