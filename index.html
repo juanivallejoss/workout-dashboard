@@ -269,11 +269,19 @@ Chart.defaults.color = '#888';
 Chart.defaults.borderColor = '#2a2a2a';
 
 // ── Weekly sessions (stacked bar) ──
+function mondayKey(dateStr) {
+  // Use the date string (YYYY-MM-DD) to avoid UTC shift issues
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  const dow = dt.getDay();
+  dt.setDate(dt.getDate() - ((dow + 6) % 7)); // back to Monday
+  const mm = String(dt.getMonth() + 1).padStart(2, '0');
+  const dd = String(dt.getDate()).padStart(2, '0');
+  return `${dt.getFullYear()}-${mm}-${dd}`;
+}
 const weeklyData = {};
 workouts.forEach(w => {
-  const d = new Date(w.startDate);
-  d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); // Monday
-  const key = d.toISOString().slice(0, 10);
+  const key = mondayKey(w.date);
   if (!weeklyData[key]) weeklyData[key] = {};
   weeklyData[key][w.type] = (weeklyData[key][w.type] || 0) + 1;
 });
@@ -281,7 +289,10 @@ const weekKeys = Object.keys(weeklyData).sort();
 new Chart(document.getElementById('weeklyChart'), {
   type: 'bar',
   data: {
-    labels: weekKeys.map(k => new Date(k).toLocaleDateString('es-AR', { day:'numeric', month:'short' })),
+    labels: weekKeys.map(k => {
+      const [y, m, d] = k.split('-').map(Number);
+      return new Date(y, m - 1, d).toLocaleDateString('es-AR', { day:'numeric', month:'short' });
+    }),
     datasets: types.map(t => ({
       label: t, backgroundColor: colorFor(t), borderRadius: 4,
       data: weekKeys.map(k => weeklyData[k][t] || 0),
@@ -290,7 +301,7 @@ new Chart(document.getElementById('weeklyChart'), {
   options: {
     responsive: true,
     plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
-    scales: { x: { stacked: true, ticks: { maxTicksLimit: 15 } }, y: { stacked: true, beginAtZero: true, ticks: { stepSize: 1 } } }
+    scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true, ticks: { stepSize: 1 } } }
   }
 });
 
