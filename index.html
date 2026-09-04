@@ -246,6 +246,9 @@ document.getElementById('app').innerHTML = `
     <div class="chart-card"><h2>Horario de entrenamiento</h2><canvas id="hourChart"></canvas></div>
     <div class="chart-card"><h2>Peso & grasa corporal</h2><canvas id="weightChart"></canvas></div>
     <div class="chart-card"><h2>Masa muscular & masa grasa</h2><canvas id="muscleChart"></canvas></div>
+    <div class="chart-card"><h2>Composición corporal (kg)</h2><canvas id="compChart"></canvas></div>
+    <div class="chart-card"><h2>BMI & grasa visceral</h2><canvas id="bmiChart"></canvas></div>
+    <div class="chart-card"><h2>Agua & proteína (%)</h2><canvas id="waterChart"></canvas></div>
     <div class="chart-card"><h2>VO2Max</h2><canvas id="vo2Chart"></canvas></div>
     <div class="chart-card full-width"><h2>Volumen semanal (media móvil 4 sem)</h2><canvas id="trendChart"></canvas></div>
     <div class="chart-card full-width"><h2>Heatmap de actividad</h2><canvas id="heatmapChart" height="160"></canvas></div>
@@ -451,33 +454,33 @@ new Chart(document.getElementById('hourChart'), {
   options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 5 } } } }
 });
 
-// ── Body composition data (Ovutek FitPal scale) ──
+// ── Body composition data (Ovutek FitPal scale — all fields) ──
 const BODY = [
-  {date:"2025-10-21",weight:69.1,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
-  {date:"2025-10-24",weight:70.7,fat_pct:13.5,muscle:58.0,fat_kg:9.5},
-  {date:"2025-10-25",weight:70.5,fat_pct:13.6,muscle:57.8,fat_kg:9.6},
-  {date:"2025-11-03",weight:69.0,fat_pct:13.1,muscle:56.9,fat_kg:9.0},
-  {date:"2025-11-08",weight:69.2,fat_pct:13.2,muscle:57.0,fat_kg:9.1},
-  {date:"2025-11-25",weight:69.5,fat_pct:13.2,muscle:57.3,fat_kg:9.2},
-  {date:"2025-12-06",weight:69.5,fat_pct:13.2,muscle:57.2,fat_kg:9.2},
-  {date:"2025-12-20",weight:68.7,fat_pct:13.0,muscle:56.7,fat_kg:8.9},
-  {date:"2026-01-22",weight:69.0,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
-  {date:"2026-02-02",weight:69.8,fat_pct:13.3,muscle:57.4,fat_kg:9.3},
-  {date:"2026-02-12",weight:68.0,fat_pct:12.9,muscle:56.2,fat_kg:8.8},
-  {date:"2026-03-01",weight:69.2,fat_pct:13.2,muscle:57.0,fat_kg:9.1},
-  {date:"2026-04-18",weight:71.0,fat_pct:13.6,muscle:58.2,fat_kg:9.7},
-  {date:"2026-04-19",weight:69.0,fat_pct:13.2,muscle:56.9,fat_kg:9.1},
-  {date:"2026-06-04",weight:68.5,fat_pct:13.0,muscle:56.5,fat_kg:8.9},
-  {date:"2026-06-10",weight:68.8,fat_pct:13.0,muscle:56.7,fat_kg:8.9},
-  {date:"2026-06-16",weight:68.3,fat_pct:13.0,muscle:56.4,fat_kg:8.9},
-  {date:"2026-06-19",weight:68.1,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
-  {date:"2026-07-10",weight:68.2,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
-  {date:"2026-07-11",weight:67.2,fat_pct:12.7,muscle:55.7,fat_kg:8.5},
-  {date:"2026-08-08",weight:68.1,fat_pct:12.9,muscle:56.3,fat_kg:8.8},
-  {date:"2026-08-27",weight:68.4,fat_pct:13.0,muscle:56.5,fat_kg:8.9},
-  {date:"2026-08-28",weight:67.8,fat_pct:12.8,muscle:56.1,fat_kg:8.6},
-  {date:"2026-08-29",weight:67.7,fat_pct:12.8,muscle:56.0,fat_kg:8.6}
+  {date:"2025-10-21",weight:69.1,fat_pct:13.2,muscle_kg:56.93,fat_kg:9.12,muscle_pct:82.39,water_pct:62.6,protein_kg:13.61,protein_pct:19.7,water_kg:43.26,bone_kg:2.99,bmi:24.5,visceral:7,bmr:1665,score:90,body_age:33,subcut_fat_kg:7.67,smi:56.0},
+  {date:"2025-10-24",weight:70.7,fat_pct:13.5,muscle_kg:57.99,fat_kg:9.54,muscle_pct:82.02,water_pct:62.3,protein_kg:13.86,protein_pct:19.6,water_kg:44.05,bone_kg:3.05,bmi:25.0,visceral:7,bmr:1685,score:90,body_age:33,subcut_fat_kg:8.06,smi:55.8},
+  {date:"2025-11-03",weight:69.0,fat_pct:13.1,muscle_kg:56.91,fat_kg:9.04,muscle_pct:82.48,water_pct:62.6,protein_kg:13.59,protein_pct:19.7,water_kg:43.19,bone_kg:2.99,bmi:24.4,visceral:7,bmr:1661,score:90,body_age:33,subcut_fat_kg:7.66,smi:56.0},
+  {date:"2025-11-08",weight:69.2,fat_pct:13.2,muscle_kg:57.02,fat_kg:9.13,muscle_pct:82.4,water_pct:62.6,protein_kg:13.63,protein_pct:19.7,water_kg:43.32,bone_kg:3.0,bmi:24.5,visceral:7,bmr:1665,score:90,body_age:33,subcut_fat_kg:7.68,smi:56.0},
+  {date:"2025-11-25",weight:69.55,fat_pct:13.2,muscle_kg:57.26,fat_kg:9.18,muscle_pct:82.33,water_pct:62.5,protein_kg:13.7,protein_pct:19.7,water_kg:43.47,bone_kg:3.01,bmi:24.6,visceral:7,bmr:1669,score:90,body_age:33,subcut_fat_kg:7.72,smi:56.0},
+  {date:"2025-12-06",weight:69.5,fat_pct:13.2,muscle_kg:57.22,fat_kg:9.17,muscle_pct:82.33,water_pct:62.5,protein_kg:13.69,protein_pct:19.7,water_kg:43.44,bone_kg:3.01,bmi:24.6,visceral:7,bmr:1669,score:90,body_age:33,subcut_fat_kg:7.71,smi:56.0},
+  {date:"2025-12-20",weight:68.7,fat_pct:13.0,muscle_kg:56.71,fat_kg:8.93,muscle_pct:82.55,water_pct:62.7,protein_kg:13.6,protein_pct:19.8,water_kg:43.08,bone_kg:2.98,bmi:24.3,visceral:7,bmr:1656,score:90,body_age:32,subcut_fat_kg:7.56,smi:56.1},
+  {date:"2026-01-22",weight:69.05,fat_pct:13.2,muscle_kg:56.9,fat_kg:9.12,muscle_pct:82.4,water_pct:62.6,protein_kg:13.6,protein_pct:19.7,water_kg:43.23,bone_kg:2.99,bmi:24.5,visceral:7,bmr:1665,score:90,body_age:33,subcut_fat_kg:7.67,smi:56.0},
+  {date:"2026-02-02",weight:69.8,fat_pct:13.3,muscle_kg:57.41,fat_kg:9.28,muscle_pct:82.25,water_pct:62.5,protein_kg:13.75,protein_pct:19.7,water_kg:43.63,bone_kg:3.02,bmi:24.7,visceral:7,bmr:1673,score:90,body_age:33,subcut_fat_kg:7.82,smi:55.9},
+  {date:"2026-02-12",weight:68.0,fat_pct:12.9,muscle_kg:56.23,fat_kg:8.77,muscle_pct:82.69,water_pct:62.8,protein_kg:13.46,protein_pct:19.8,water_kg:42.7,bone_kg:2.96,bmi:24.1,visceral:7,bmr:1648,score:90,body_age:32,subcut_fat_kg:7.41,smi:56.2},
+  {date:"2026-03-01",weight:69.2,fat_pct:13.2,muscle_kg:57.02,fat_kg:9.13,muscle_pct:82.4,water_pct:62.6,protein_kg:13.63,protein_pct:19.7,water_kg:43.32,bone_kg:3.0,bmi:24.5,visceral:7,bmr:1665,score:90,body_age:33,subcut_fat_kg:7.68,smi:56.0},
+  {date:"2026-04-18",weight:71.03,fat_pct:13.63,muscle_kg:58.18,fat_kg:9.69,muscle_pct:81.91,water_pct:62.22,protein_kg:13.93,protein_pct:19.62,water_kg:44.2,bone_kg:3.06,bmi:25.17,visceral:7.5,bmr:1692,score:90,body_age:33,subcut_fat_kg:8.16,smi:55.72},
+  {date:"2026-04-19",weight:69.05,fat_pct:13.2,muscle_kg:56.9,fat_kg:9.12,muscle_pct:82.4,water_pct:62.6,protein_kg:13.6,protein_pct:19.7,water_kg:43.23,bone_kg:2.99,bmi:24.5,visceral:7,bmr:1665,score:90,body_age:33,subcut_fat_kg:7.67,smi:56.0},
+  {date:"2026-06-04",weight:68.5,fat_pct:13.0,muscle_kg:56.54,fat_kg:8.91,muscle_pct:82.54,water_pct:62.7,protein_kg:13.56,protein_pct:19.8,water_kg:42.95,bone_kg:2.97,bmi:24.3,visceral:7,bmr:1656,score:90,body_age:32,subcut_fat_kg:7.54,smi:56.1},
+  {date:"2026-06-10",weight:68.78,fat_pct:13.03,muscle_kg:56.74,fat_kg:8.96,muscle_pct:82.5,water_pct:62.67,protein_kg:13.59,protein_pct:19.77,water_kg:43.11,bone_kg:2.98,bmi:24.37,visceral:7,bmr:1659,score:90,body_age:32,subcut_fat_kg:7.57,smi:56.07},
+  {date:"2026-06-16",weight:68.32,fat_pct:12.97,muscle_kg:56.44,fat_kg:8.86,muscle_pct:82.62,water_pct:62.73,protein_kg:13.5,protein_pct:19.77,water_kg:42.85,bone_kg:2.97,bmi:24.2,visceral:7,bmr:1652,score:90,body_age:32,subcut_fat_kg:7.49,smi:56.13},
+  {date:"2026-06-19",weight:68.13,fat_pct:12.87,muscle_kg:56.34,fat_kg:8.77,muscle_pct:82.69,water_pct:62.83,protein_kg:13.49,protein_pct:19.8,water_kg:42.81,bone_kg:2.96,bmi:24.1,visceral:6.33,bmr:1648,score:90,body_age:32,subcut_fat_kg:7.41,smi:56.17},
+  {date:"2026-07-10",weight:68.17,fat_pct:12.93,muscle_kg:56.33,fat_kg:8.82,muscle_pct:82.64,water_pct:62.77,protein_kg:13.49,protein_pct:19.8,water_kg:42.78,bone_kg:2.96,bmi:24.17,visceral:7,bmr:1651,score:90,body_age:32,subcut_fat_kg:7.45,smi:56.17},
+  {date:"2026-07-11",weight:67.17,fat_pct:12.65,muscle_kg:55.71,fat_kg:8.5,muscle_pct:82.93,water_pct:62.98,protein_kg:13.35,protein_pct:19.88,water_kg:42.3,bone_kg:2.93,bmi:23.77,visceral:6,bmr:1634,score:90,body_age:32,subcut_fat_kg:7.2,smi:56.35},
+  {date:"2026-08-08",weight:68.12,fat_pct:12.9,muscle_kg:56.31,fat_kg:8.79,muscle_pct:82.66,water_pct:62.8,protein_kg:13.46,protein_pct:19.77,water_kg:42.78,bone_kg:2.96,bmi:24.13,visceral:6.33,bmr:1650,score:90,body_age:32,subcut_fat_kg:7.42,smi:56.13},
+  {date:"2026-08-27",weight:68.42,fat_pct:13.0,muscle_kg:56.5,fat_kg:8.89,muscle_pct:82.57,water_pct:62.7,protein_kg:13.51,protein_pct:19.75,water_kg:42.9,bone_kg:2.97,bmi:24.25,visceral:7,bmr:1655,score:90,body_age:32.5,subcut_fat_kg:7.53,smi:56.1},
+  {date:"2026-08-28",weight:67.75,fat_pct:12.75,muscle_kg:56.08,fat_kg:8.64,muscle_pct:82.77,water_pct:62.9,protein_kg:13.45,protein_pct:19.85,water_kg:42.61,bone_kg:2.95,bmi:24.0,visceral:6.5,bmr:1644,score:90,body_age:32,subcut_fat_kg:7.32,smi:56.2},
+  {date:"2026-08-29",weight:67.67,fat_pct:12.75,muscle_kg:56.03,fat_kg:8.63,muscle_pct:82.8,water_pct:62.9,protein_kg:13.43,protein_pct:19.85,water_kg:42.57,bone_kg:2.95,bmi:23.95,visceral:6.5,bmr:1642,score:90,body_age:32,subcut_fat_kg:7.31,smi:56.25}
 ];
+const lastB = BODY[BODY.length - 1];
 
 const VO2 = [
   {date:"2025-09-22",value:55.1},{date:"2025-10-06",value:55.16},{date:"2025-10-13",value:55.35},
@@ -492,6 +495,24 @@ const VO2 = [
   {date:"2026-05-18",value:52.31},{date:"2026-06-08",value:52.47}
 ];
 
+// ── Ovutek KPI cards ──
+document.getElementById('app').insertAdjacentHTML('beforeend', `
+  <div class="stats-row" style="margin-bottom:32px">
+    <div class="stat-card"><div class="label">Peso actual</div><div class="value">${lastB.weight}<span class="unit"> kg</span></div></div>
+    <div class="stat-card"><div class="label">Grasa corporal</div><div class="value">${lastB.fat_pct}<span class="unit"> %</span></div></div>
+    <div class="stat-card"><div class="label">Masa muscular</div><div class="value">${lastB.muscle_kg}<span class="unit"> kg</span></div></div>
+    <div class="stat-card"><div class="label">IMC</div><div class="value">${lastB.bmi}</div></div>
+    <div class="stat-card"><div class="label">Grasa visceral</div><div class="value">${lastB.visceral}<span class="unit"> nivel</span></div></div>
+    <div class="stat-card"><div class="label">BMR</div><div class="value">${lastB.bmr}<span class="unit"> kcal</span></div></div>
+    <div class="stat-card"><div class="label">Agua corporal</div><div class="value">${lastB.water_pct}<span class="unit"> %</span></div></div>
+    <div class="stat-card"><div class="label">Proteína</div><div class="value">${lastB.protein_kg}<span class="unit"> kg</span></div></div>
+    <div class="stat-card"><div class="label">Masa ósea</div><div class="value">${lastB.bone_kg}<span class="unit"> kg</span></div></div>
+    <div class="stat-card"><div class="label">Edad corporal</div><div class="value">${lastB.body_age}<span class="unit"> años</span></div></div>
+    <div class="stat-card"><div class="label">Score corporal</div><div class="value">${lastB.score}</div></div>
+    <div class="stat-card"><div class="label">IME</div><div class="value">${lastB.smi}<span class="unit"> %</span></div></div>
+  </div>
+`);
+
 // ── Weight + Body Fat chart ──
 new Chart(document.getElementById('weightChart'), {
   type: 'line',
@@ -504,6 +525,10 @@ new Chart(document.getElementById('weightChart'), {
       {
         label: 'Grasa (%)', data: BODY.map(d => ({x: new Date(d.date), y: d.fat_pct})),
         borderColor: '#f97316', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y1'
+      },
+      {
+        label: 'BMR (kcal/100)', data: BODY.map(d => ({x: new Date(d.date), y: +(d.bmr/100).toFixed(1)})),
+        borderColor: '#3b82f644', borderDash: [5,5], fill: false, tension: 0.3, pointRadius: 0, yAxisID: 'y1'
       }
     ]
   },
@@ -524,7 +549,7 @@ new Chart(document.getElementById('muscleChart'), {
   data: {
     datasets: [
       {
-        label: 'Masa muscular (kg)', data: BODY.map(d => ({x: new Date(d.date), y: d.muscle})),
+        label: 'Masa muscular (kg)', data: BODY.map(d => ({x: new Date(d.date), y: d.muscle_kg})),
         borderColor: '#22c55e', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y'
       },
       {
@@ -540,6 +565,81 @@ new Chart(document.getElementById('muscleChart'), {
       x: { type: 'time', time: { unit: 'month' } },
       y: { position: 'left', title: { display: true, text: 'Músculo (kg)' }, min: 54, max: 60 },
       y1: { position: 'right', title: { display: true, text: 'Grasa (kg)' }, min: 7.5, max: 10.5, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// ── Body composition stacked (water, protein, fat, bone) ──
+new Chart(document.getElementById('compChart'), {
+  type: 'bar',
+  data: {
+    labels: BODY.map(d => { const [y,m,dd] = d.date.split('-').map(Number); return new Date(y,m-1,dd).toLocaleDateString('es-AR',{day:'numeric',month:'short'}); }),
+    datasets: [
+      { label: 'Agua (kg)', data: BODY.map(d => d.water_kg), backgroundColor: '#3b82f6', borderRadius: 2 },
+      { label: 'Proteína (kg)', data: BODY.map(d => d.protein_kg), backgroundColor: '#22c55e', borderRadius: 2 },
+      { label: 'Grasa (kg)', data: BODY.map(d => d.fat_kg), backgroundColor: '#f97316', borderRadius: 2 },
+      { label: 'Hueso (kg)', data: BODY.map(d => d.bone_kg), backgroundColor: '#888', borderRadius: 2 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
+    scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: 'kg' } } }
+  }
+});
+
+// ── BMI + Visceral fat ──
+new Chart(document.getElementById('bmiChart'), {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        label: 'BMI', data: BODY.map(d => ({x: new Date(d.date), y: d.bmi})),
+        borderColor: '#8b5cf6', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y'
+      },
+      {
+        label: 'Grasa visceral', data: BODY.map(d => ({x: new Date(d.date), y: d.visceral})),
+        borderColor: '#ef4444', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
+    scales: {
+      x: { type: 'time', time: { unit: 'month' } },
+      y: { position: 'left', title: { display: true, text: 'BMI' }, min: 23, max: 26 },
+      y1: { position: 'right', title: { display: true, text: 'Visceral (nivel)' }, min: 4, max: 10, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// ── Water + Protein % ──
+new Chart(document.getElementById('waterChart'), {
+  type: 'line',
+  data: {
+    datasets: [
+      {
+        label: 'Agua (%)', data: BODY.map(d => ({x: new Date(d.date), y: d.water_pct})),
+        borderColor: '#3b82f6', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y'
+      },
+      {
+        label: 'Proteína (%)', data: BODY.map(d => ({x: new Date(d.date), y: d.protein_pct})),
+        borderColor: '#22c55e', fill: false, tension: 0.3, pointRadius: 4, yAxisID: 'y1'
+      },
+      {
+        label: 'IME / SMI (%)', data: BODY.map(d => ({x: new Date(d.date), y: d.smi})),
+        borderColor: '#f97316', fill: false, tension: 0.3, pointRadius: 3, borderDash: [5,5], yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position:'bottom', labels: { boxWidth: 12 } } },
+    scales: {
+      x: { type: 'time', time: { unit: 'month' } },
+      y: { position: 'left', title: { display: true, text: 'Agua (%)' }, min: 61, max: 64 },
+      y1: { position: 'right', title: { display: true, text: '%' }, min: 18, max: 58, grid: { drawOnChartArea: false } }
     }
   }
 });
